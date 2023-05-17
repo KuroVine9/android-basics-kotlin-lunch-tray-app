@@ -18,6 +18,7 @@ package com.example.lunchtray
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import com.example.lunchtray.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // TODO: Retrieve NavController from the NavHostFragment
+        navController = (supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment)
+            .navController
     }
 }
