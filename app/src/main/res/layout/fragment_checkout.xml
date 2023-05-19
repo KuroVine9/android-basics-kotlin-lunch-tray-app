@@ -21,7 +21,6 @@
     android:id="@+id/layout_checkout"
     tools:context=".ui.order.CheckoutFragment">
 
-    <!-- TODO: Add the data binding variables of the type OrderViewModel and the CheckoutFragment -->
     <data>
         <variable
             name="viewModel"
@@ -47,7 +46,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <!-- TODO: display the entree name based on the entree selection -->
             <TextView
                 android:id="@+id/entree_selection"
                 style="@style/Widget.LunchTray.TextView.CheckoutItem.Info"
@@ -56,7 +54,6 @@
                 android:text='@{viewModel.entree.name}'
                 tools:text="Cauliflower" />
 
-            <!-- TODO: display the entree price based on the entree selection -->
             <TextView
                 android:id="@+id/entree_price"
                 style="@style/Widget.LunchTray.TextView.CheckoutItem.Info"
@@ -65,7 +62,6 @@
                 android:text='@{viewModel.entree.formattedPrice}'
                 tools:text="$7.00"/>
 
-            <!-- TODO: display the side name based on the side selection -->
             <TextView
                 android:id="@+id/side_selection"
                 style="@style/Widget.LunchTray.TextView.CheckoutItem.Info"
@@ -74,7 +70,6 @@
                 android:text='@{viewModel.side.name}'
                 tools:text="Spicy Potatoes" />
 
-            <!-- TODO: display the side price based on the side selection -->
             <TextView
                 android:id="@+id/side_price"
                 style="@style/Widget.LunchTray.TextView.CheckoutItem.Info"
@@ -83,7 +78,6 @@
                 android:text='@{viewModel.side.formattedPrice}'
                 tools:text="$2.00"/>
 
-            <!-- TODO: display the accompaniment name based on the accompaniment selection -->
             <TextView
                 android:id="@+id/accompaniment_selection"
                 style="@style/Widget.LunchTray.TextView.CheckoutItem.Info"
@@ -92,7 +86,6 @@
                 android:text='@{viewModel.accompaniment.name}'
                 tools:text="Mixed Berries" />
 
-            <!-- TODO: display the accompaniment price based on the accompaniment selection -->
             <TextView
                 android:id="@+id/accompaniment_price"
                 style="@style/Widget.LunchTray.TextView.CheckoutItem.Info"
@@ -109,7 +102,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/accompaniment_selection" />
 
-            <!-- TODO: set the text to the current subtotal value from the view model -->
             <TextView
                 android:id="@+id/subtotal"
                 style="@style/Widget.LunchTray.TextView.Subtotal"
@@ -118,7 +110,6 @@
                 android:text='@{@string/subtotal(viewModel.subtotal)}'
                 tools:text="Subtotal: $10.00"/>
 
-            <!-- TODO: set the text to the current tax value from the view model -->
             <TextView
                 android:id="@+id/tax"
                 style="@style/Widget.LunchTray.TextView.Subtotal"
@@ -128,7 +119,6 @@
                 android:text='@{@string/tax(viewModel.tax)}'
                 tools:text="Tax: $0.73"/>
 
-            <!-- TODO: set the text to the current total value from the view model -->
             <TextView
                 android:id="@+id/total"
                 android:layout_width="wrap_content"
@@ -140,7 +130,6 @@
                 android:text='@{@string/total(viewModel.total)}'
                 tools:text="Total: $10.73"/>
 
-            <!-- TODO: submit the order when clicked -->
             <Button
                 android:id="@+id/submit_button"
                 android:layout_width="match_parent"
@@ -152,7 +141,6 @@
                 app:layout_constraintTop_toBottomOf="@id/total"
                 android:onClick='@{() -> checkoutFrag.submitOrder()}' />
 
-            <!-- TODO: cancel the order when clicked -->
             <Button
                 android:id="@+id/cancel_button"
                 style="?attr/materialButtonOutlinedStyle"
